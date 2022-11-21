@@ -1,6 +1,7 @@
 <script>
 import JumboTron from '../JumboTron.vue';
 import SliderLogos from '../SliderLogos.vue';
+import MainCourses from '../MainCourses.vue';
 
 
 export default {
@@ -8,6 +9,7 @@ export default {
     components: {
         JumboTron,
         SliderLogos,
+        MainCourses
     }
 }
 
@@ -18,11 +20,12 @@ export default {
 
     <main>
 
-        <div class="container">
-            <JumboTron />
-            <SliderLogos />
 
-        </div>
+        <JumboTron />
+        <SliderLogos />
+        <MainCourses />
+
+
 
 
 

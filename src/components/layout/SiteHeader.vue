@@ -24,6 +24,9 @@ export default {
             <NavBar />
 
             <SearchBox />
+
+
+
         </div>
 
     </header>
