@@ -8,7 +8,7 @@ export default {
 
 <template>
 
-    <div class="row align-items-center py-5">
+    <div class="row align-items-center pt-5">
         <div class="col-6 ">
             <div class="jumbotron jumbotron-fluid">
                 <div class="container">
