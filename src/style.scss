@@ -1,4 +1,4 @@
-@use './assets/scss/variables';
+@use './assets/scss/variables' as *;
 
 // Import all of Bootstrap's CSS
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
@@ -7,4 +7,26 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+.button {
+  font-size: 1rem !important;
+  border-radius: 0.25rem !important;
+  padding: 1rem 2rem !important;
+  width: 260px;
+  background-color: $back-texthover ;
+  border-color: transparent;
+
+  &:active {
+    background-color: $back-buttonhover !important;
+    border-color: transparent !important;
+  }
+
+  &:hover {
+    background-color: $back-buttonhover;
+  }
+
+  span {
+    font-size: 14px;
+  }
 }
