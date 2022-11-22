@@ -4,6 +4,8 @@ import SliderLogos from '../SliderLogos.vue';
 import MainCourses from '../MainCourses.vue';
 import MainTutor from '../MainTutor.vue';
 import SliderCard from '../SliderCard.vue';
+import MainSlider from '../MainSlider.vue';
+
 
 
 
@@ -14,7 +16,9 @@ export default {
         SliderLogos,
         MainCourses,
         MainTutor,
+        MainSlider,
         SliderCard,
+
     }
 }
 
@@ -30,7 +34,8 @@ export default {
         <SliderLogos />
         <MainCourses />
         <MainTutor />
-        <SliderCard />
+        <MainSlider />
+
 
 
 

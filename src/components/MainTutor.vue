@@ -124,8 +124,8 @@ export default {
                             <p class="heading-description">Sneek peek into what has in store for you on our online
                                 teaching and
                                 mentoring portal. Seek for some hidden hints of early-bird rewards as well.</p>
-                            <a class="sample" href="#">Download free guidebook <i
-                                    class="px-2 fa-solid fa-arrow-right-long"></i></a>
+                            <p><a class="sample" href="#">Download free guidebook <i
+                                        class="px-2 fa-solid fa-arrow-right-long"></i></a></p>
                         </div>
                     </div>
                 </div>
@@ -224,6 +224,7 @@ export default {
     line-height: 0;
     direction: ltr;
     fill: $back-section2;
+    z-index: -1;
 }
 
 

@@ -55,6 +55,7 @@ export default {
     font-size: 1rem !important;
     border-radius: 0.25rem !important;
     padding: 1rem 2rem !important;
+    width: 260px;
 }
 
 .sample {

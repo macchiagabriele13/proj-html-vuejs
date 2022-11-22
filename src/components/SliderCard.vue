@@ -1,25 +1,43 @@
 <script>
-
 export default {
-    name: "SliderCard"
+    name: "SliderCard",
+
+    props: {
+        card: Object
+    },
+    methods: {
+        getImagePath: function (imgPath) {
+            return new URL(imgPath, import.meta.url).href;
+        },
+    }
+
+
 }
 
 </script>
 
 <template>
 
-    <section class="slider">
 
-        <div class="title_block text-center pb-5">
-            <h5>
-                MAXCOACH AVAILABLE COURSES
-            </h5>
-            <h1>
-                Access <span class="marked">Smart Tutoring</span> Program For Benefits.
-            </h1>
+    <div class="col">
+        <div class="card">
+            <div class="card_text">
+                <h5>{{ card.title }}</h5>
+                <p>{{ card.subtitle }}</p>
+            </div>
+            <div class="card_profile d-flex">
+                <div class="card_img">
+                    <img class="rounded" :src="getImagePath(`${card.img}`)" alt="">
+                </div>
+                <div class="card_info">
+                    <h5>{{ card.name }}</h5>
+                    <h6>{{ card.role }}</h6>
+                </div>
+            </div>
         </div>
+    </div>
 
-    </section>
+
 
 
 </template>
@@ -27,26 +45,11 @@ export default {
 <style lang="scss" scoped>
 @use '../assets/scss/variables' as *;
 
-.slider {
-    background-color: $back-section2;
-    margin-top: 100px;
+img {
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    width: 60px;
 
-    .title_block {
-        padding-top: 5rem;
-
-        .marked {
-            color: $back-texthover;
-            font-weight: 300;
-        }
-
-        h5 {
-            font-size: 0.9rem;
-            color: gray;
-        }
-
-        h1 {
-            font-size: 2rem;
-        }
-    }
 }
 </style>

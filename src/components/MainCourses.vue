@@ -67,7 +67,7 @@ export default {
 
         <div class="container">
 
-            <div class="title_block text-center pb-5">
+            <div class="title_block text-center pb-3">
                 <h5>
                     STIMULATED TO LEARN?
                 </h5>
@@ -77,7 +77,7 @@ export default {
             </div>
 
 
-            <div class="row g-5 py-5">
+            <div class="row g-5 py-3">
                 <div class="col-6 d-flex align-items-center" v-for="card in courses">
                     <div class="wrap_img">
                         <img :src="getImagePath(`${card.img}`)" :alt="card.text">
@@ -97,7 +97,7 @@ export default {
             <div>
                 <p class="lead py-3 text-center">
                     <a class=" button btn btn-primary btn-lg" href="Jumbo action link" role="button"> <span
-                            class="px-2">View all courses</span> <i class="px-2 fa-solid fa-arrow-right-long"></i></a>
+                            class="px-1">View all courses</span> <i class=" fa-solid fa-arrow-right-long"></i></a>
                 </p>
             </div>
 
@@ -118,7 +118,8 @@ export default {
 .button {
     font-size: 1rem !important;
     border-radius: 0.25rem !important;
-    padding: 1rem 4rem !important;
+    padding: 1rem 2rem !important;
+    width: 260px;
 }
 
 .title_block {
