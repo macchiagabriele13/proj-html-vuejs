@@ -223,7 +223,7 @@ export default {
     right: 0;
     line-height: 0;
     direction: ltr;
-    fill: #F8F8F8;
+    fill: $back-section2;
 }
 
 

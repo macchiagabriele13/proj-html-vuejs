@@ -3,6 +3,8 @@ import JumboTron from '../JumboTron.vue';
 import SliderLogos from '../SliderLogos.vue';
 import MainCourses from '../MainCourses.vue';
 import MainTutor from '../MainTutor.vue';
+import SliderCard from '../SliderCard.vue';
+
 
 
 export default {
@@ -11,7 +13,8 @@ export default {
         JumboTron,
         SliderLogos,
         MainCourses,
-        MainTutor
+        MainTutor,
+        SliderCard,
     }
 }
 
@@ -27,6 +30,7 @@ export default {
         <SliderLogos />
         <MainCourses />
         <MainTutor />
+        <SliderCard />
 
 
 
