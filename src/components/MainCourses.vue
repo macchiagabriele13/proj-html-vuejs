@@ -2,6 +2,55 @@
 
 export default {
     name: 'MainCourses',
+    data() {
+        return {
+            courses: [
+                {
+                    text: 'Learning to Write as a Professional Author',
+                    price: '$40,00',
+                    lessons: '20 Lessons',
+                    students: '50 Students',
+                    img: '../assets/images/course-02-480x298.jpg'
+                },
+                {
+                    text: 'Learning to Write as a Professional Author',
+                    price: '$40,00',
+                    lessons: '20 Lessons',
+                    students: '50 Students',
+                    img: '../assets/images/course-featured-image-01-480x298.jpg'
+                },
+                {
+                    text: 'Learning to Write as a Professional Author',
+                    price: '$40,00',
+                    lessons: '20 Lessons',
+                    students: '50 Students',
+                    img: '../assets/images/stock-full-hd-03-480x298.jpg'
+                },
+                {
+                    text: 'Learning to Write as a Professional Author',
+                    price: '$40,00',
+                    lessons: '20 Lessons',
+                    students: '50 Students',
+                    img: '../assets/images/stock-full-hd-04-480x298.jpg'
+                },
+                {
+                    text: 'Learning to Write as a Professional Author',
+                    price: '$40,00',
+                    lessons: '20 Lessons',
+                    students: '50 Students',
+                    img: '../assets/images/stock-full-hd-05-480x298.jpg'
+                },
+                {
+                    text: 'Learning to Write as a Professional Author',
+                    price: '$40,00',
+                    lessons: '20 Lessons',
+                    students: '50 Students',
+                    img: '../'
+                },
+            ],
+
+        }
+    },
 
 }
 
@@ -23,33 +72,28 @@ export default {
             </div>
 
 
-            <div class="row py-5">
-                <div class="col-6 d-flex align-items-center">
+            <div class="row g-5 py-5">
+                <div class="col-6 d-flex align-items-center" v-for="card in courses">
                     <div class="wrap_img">
-                        <img src="../assets/images/course-02-480x298.jpg" alt="">
+                        <img :src="card.img" :alt="card.text">
                     </div>
                     <div class="info_text px-4">
-                        <h3>$40.00</h3>
-                        <h4>Learning to Write as a Professional Author</h4>
+                        <h3>{{ card.price }}</h3>
+                        <h4>{{ card.text }}</h4>
                         <div class="sub_info_text d-flex">
-                            <h6><i class="fa-regular fa-file-lines"></i> 20 Lessons</h6>
-                            <h6><i class="fa-regular fa-user"></i> 50 Students</h6>
+                            <h6><i class="fa-regular fa-file-lines"></i> {{ card.lessons }}</h6>
+                            <h6><i class="fa-regular fa-user"></i> {{ card.students }}</h6>
                         </div>
                     </div>
                 </div>
-                <div class="col-6 d-flex align-items-center">
-                    <div class="wrap_img">
-                        <img src="../assets/images/course-02-480x298.jpg" alt="">
-                    </div>
-                    <div class="info_text px-4">
-                        <h3>$40.00</h3>
-                        <h4>Learning to Write as a Professional Author</h4>
-                        <div class="sub_info_text d-flex">
-                            <h6><i class="fa-regular fa-file-lines"></i> 20 Lessons</h6>
-                            <h6><i class="fa-regular fa-user"></i> 50 Students</h6>
-                        </div>
-                    </div>
-                </div>
+
+            </div>
+
+            <div>
+                <p class="lead py-3 text-center">
+                    <a class=" button btn btn-primary btn-lg" href="Jumbo action link" role="button"> <span
+                            class="px-2">View all courses</span> <i class="px-2 fa-solid fa-arrow-right-long"></i></a>
+                </p>
             </div>
 
         </div>
@@ -60,6 +104,18 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../assets/scss/variables' as *;
+
+.courses {
+    background-color: $back-section2;
+}
+
+.button {
+    font-size: 1rem !important;
+    border-radius: 0.25rem !important;
+    padding: 1rem 2rem !important;
+}
+
 .title_block {
     h5 {
         font-size: 0.9rem;

@@ -1,5 +1,7 @@
 @use './assets/scss/variables';
-@use '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+// Import all of Bootstrap's CSS
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
 
 * {
   padding: 0;
