@@ -45,12 +45,17 @@ export default {
                     price: '$40,00',
                     lessons: '20 Lessons',
                     students: '50 Students',
-                    img: '../'
+                    img: '../assets/images/stock-full-hd-06-480x298.jpg'
                 },
             ],
 
         }
     },
+    methods: {
+        getImagePath: function (imgPath) {
+            return new URL(imgPath, import.meta.url).href;
+        }
+    }
 
 }
 
@@ -75,7 +80,7 @@ export default {
             <div class="row g-5 py-5">
                 <div class="col-6 d-flex align-items-center" v-for="card in courses">
                     <div class="wrap_img">
-                        <img :src="card.img" :alt="card.text">
+                        <img :src="getImagePath(`${card.img}`)" :alt="card.text">
                     </div>
                     <div class="info_text px-4">
                         <h3>{{ card.price }}</h3>
@@ -113,10 +118,12 @@ export default {
 .button {
     font-size: 1rem !important;
     border-radius: 0.25rem !important;
-    padding: 1rem 2rem !important;
+    padding: 1rem 4rem !important;
 }
 
 .title_block {
+
+
     h5 {
         font-size: 0.9rem;
         color: gray;
@@ -125,6 +132,26 @@ export default {
     h1 {
         font-size: 2rem;
     }
+}
+
+.col-6 {
+    padding: 1rem;
+
+    &:hover {
+        color: $back-texthover;
+        background-color: white;
+        cursor: pointer;
+    }
+
+
+}
+
+.info_text {
+
+    h3 {
+        color: $back-texthover;
+    }
+
 }
 
 .wrap_img {
