@@ -10,7 +10,7 @@ export default {
 <template>
 
     <div class="container">
-        <div class=" logos pb-3 row align-items-center">
+        <div class=" logos pb-5 row align-items-center">
             <div class="col text-center">
                 <a href="">
                     <img src="../assets/images/client-logo-01.png" alt="">

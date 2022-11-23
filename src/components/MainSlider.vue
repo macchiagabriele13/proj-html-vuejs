@@ -34,30 +34,7 @@ export default {
                     role: '/ IT Specialist',
 
                 },
-                {
-                    title: 'Professional team of specialist and passionate mentors at reach',
-                    subtitle: 'I need to get a certification for English proficiency and MaxCoach is my best choice. Their tutors are smart and professional when dealing with students.',
-                    img: '../assets/images/testimonial-avata-01.jpg',
-                    name: 'Madley Pondor',
-                    role: '/ IT Specialist',
 
-                },
-                {
-                    title: 'Professional team of specialist and passionate mentors at reach',
-                    subtitle: 'I need to get a certification for English proficiency and MaxCoach is my best choice. Their tutors are smart and professional when dealing with students.',
-                    img: '../assets/images/testimonial-avata-01.jpg',
-                    name: 'Madley Pondor',
-                    role: '/ IT Specialist',
-
-                },
-                {
-                    title: 'Professional team of specialist and passionate mentors at reach',
-                    subtitle: 'I need to get a certification for English proficiency and MaxCoach is my best choice. Their tutors are smart and professional when dealing with students.',
-                    img: '../assets/images/testimonial-avata-01.jpg',
-                    name: 'Madley Pondor',
-                    role: '/ IT Specialist',
-
-                },
             ],
             activeSlide: 0,
         }
@@ -108,7 +85,7 @@ export default {
             </h1>
         </div>
 
-        <div class="row row-cols-6">
+        <div class="row">
             <SliderCard :card="team" :class="activeSlide === i ? 'active' : ''" v-for="(team,i) in teamList" />
         </div>
 
@@ -139,7 +116,7 @@ export default {
     margin-top: 100px;
 
 
-    .col:not(.col.active) {
+    .col-4:not(.col-4.active) {
         opacity: .4;
     }
 

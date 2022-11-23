@@ -12,8 +12,8 @@ export default {
             <div class="col-6 ">
                 <div class="jumbotron jumbotron-fluid">
                     <div class="container">
-                        <h1 class="display-3">Distant learning for further expansion</h1>
-                        <p class="lead pb-4">Learning is a life-long jurbey that in fact we never find the terminate
+                        <h1 class="main_title">Distant learning for further expansion</h1>
+                        <p class="subtitle pb-4">Learning is a life-long jurbey that in fact we never find the terminate
                             stop.
                             Stop
                             searching, enjoy the process.</p>
@@ -51,6 +51,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../assets/scss/variables' as *;
+
 .button {
     font-size: 1rem !important;
     border-radius: 0.25rem !important;
@@ -58,10 +60,40 @@ export default {
     width: 260px;
 }
 
+.main_title {
+    font-size: 48px;
+    line-height: 1.17em;
+    color: $primarycolor;
+    font-weight: 700;
+    letter-spacing: 0em;
+
+}
+
+.subtitle {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.67em;
+    color: $paragraphcolor;
+
+}
+
 .sample {
     text-decoration: none;
     border-bottom: 1px solid #80808017;
+
+    &:hover {
+        border-bottom: 1px solid $back-texthover ;
+        transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+        transform: scaleX(0) translateZ(0);
+    }
+
+
 }
+
+strong {
+    color: $back-texthover;
+}
+
 
 .right_col {
     position: relative;

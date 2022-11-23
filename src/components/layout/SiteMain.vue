@@ -5,6 +5,8 @@ import MainCourses from '../MainCourses.vue';
 import MainTutor from '../MainTutor.vue';
 import SliderCard from '../SliderCard.vue';
 import MainSlider from '../MainSlider.vue';
+import BannerCall from '../BannerCall.vue';
+import DataCounter from '../DataCounter.vue'
 
 
 
@@ -18,7 +20,8 @@ export default {
         MainTutor,
         MainSlider,
         SliderCard,
-
+        BannerCall,
+        DataCounter
     }
 }
 
@@ -35,6 +38,8 @@ export default {
         <MainCourses />
         <MainTutor />
         <MainSlider />
+        <BannerCall />
+        <DataCounter />
 
 
 

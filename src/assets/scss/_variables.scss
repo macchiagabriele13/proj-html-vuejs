@@ -1,16 +1,10 @@
 /* Color Cube */
 
 $back-textprimary: #0B0B0B;
-$back-: #1FAD96;
-$back-: #4473EE;
-$back-: #504442;
-$back-: #5DF0C8;
-$back-: #AD6F5B;
-$back-: #AEADAE;
-$back-: #CB1917;
-$back-: #FFBE6B;
-$back-: #FFFFFF;
-
+$primarycolor: #3F3A64;
+$paragraphcolor: #8C89A2;
+$back-texthover: #25AB94;
+$back-section2: #F5F7FA;
 
 /* Median Cut */
 
@@ -18,13 +12,28 @@ $back-: #2C3837;
 $back-: #975C4D;
 $back-: #9EA4A5;
 $back-: #AD876A;
-$back-section2: #F6F3F5;
+
 
 
 /* Material Design */
 
-$back-texthover: #25AB94;
+
 $back-: #48495F;
 $back-: #A6846B;
 $back-: #C52618;
 $back-: #C99F8E;
+
+
+
+@font-face {
+    font-family: 'Gilroy';
+    src: local('Gilroy Light'), local('Gilroy-Light'),
+        url('../font/Gilroy-Light.woff2') format('woff2'),
+        url('../font/Gilroy-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+$font: "Gilroy", sans-serif !default;
+$font-family-custom-sans-serif: "Gilroy", sans-serif !default;
+$font-family-base: $font-family-custom-sans-serif !default;

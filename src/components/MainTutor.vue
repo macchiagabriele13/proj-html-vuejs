@@ -57,7 +57,7 @@ export default {
 
             <div class="content-wrap">
                 <div class="row">
-                    <div class="col-4 g-5 px-5" v-for="tutor in tutorList">
+                    <div class="col-4 gx-5 px-5" v-for="tutor in tutorList">
                         <a :href="tutor.link">
                             <div class="wrap-image pb-4">
                                 <img :src="getImagePath(`${tutor.img}`)" alt="tutor image">
@@ -148,31 +148,50 @@ export default {
 @use '../assets/scss/variables' as *;
 
 .title_block {
+    margin-bottom: 64px;
+
     span {
         color: $back-texthover;
+        font-weight: 400;
     }
 
     h5 {
-        font-size: 0.9rem;
-        color: gray;
+        font-size: 15px;
+        font-weight: 500;
+        text-transform: uppercase;
+        line-height: 2em;
+        letter-spacing: 2px;
+        color: $paragraphcolor;
     }
 
     h1 {
-        font-size: 2rem;
+        font-size: 34px;
+        line-height: 1.17em;
+        color: $primarycolor;
+        font-weight: 700;
     }
 }
 
 .content-wrap {
     a {
         text-decoration: none;
-    }
 
-    &:hover {
-        .button-content-wrapper {
-            color: $back-texthover;
+        &:hover {
+
+            .button-text,
+            .button-icon {
+                color: $back-texthover;
+            }
+
+            .button-content-wrapper {
+                width: fit-content;
+                border-bottom: 1px solid rgba(128, 128, 128, 0.326);
+            }
+
         }
-
     }
+
+
 }
 
 
@@ -180,10 +199,19 @@ export default {
 
     .title {
         color: $back-textprimary;
+        font-size: 24px;
+        line-height: 1.5;
+        margin-bottom: 0;
+        font-weight: 700;
+
     }
 
     .description {
         color: $back-textprimary;
+        line-height: 1.6;
+        margin-top: 14px;
+        font-size: 15px;
+        font-weight: 400;
     }
 }
 
@@ -243,11 +271,15 @@ export default {
 
 .sample {
     text-decoration: none;
-    border-bottom: 1px solid #80808017;
+    border-bottom: 1px solid #80808043;
     font-size: 16px;
     color: $back-texthover;
     padding: 3px 0;
     font-weight: 700;
+
+    &:hover {
+        border-bottom: 1px solid $back-texthover;
+    }
 }
 
 .jumbotron {

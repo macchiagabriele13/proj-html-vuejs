@@ -7,6 +7,18 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+
+  font-family: 'Gilroy', sans-serif;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $primarycolor;
 }
 
 .button {
@@ -18,15 +30,17 @@
   border-color: transparent;
 
   &:active {
-    background-color: $back-buttonhover !important;
+    background-color: $primarycolor !important;
     border-color: transparent !important;
   }
 
   &:hover {
-    background-color: $back-buttonhover;
+    background-color: $primarycolor;
   }
 
   span {
     font-size: 14px;
+    font-weight: 700;
+    color: white;
   }
 }
