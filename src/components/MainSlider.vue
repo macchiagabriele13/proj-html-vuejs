@@ -91,7 +91,7 @@ export default {
 
 
 
-        <div class="thumbs d-flex justify-content-center">
+        <div class="thumbs py-3 d-flex justify-content-center">
             <div class="prev" @click="prevSlide"></div>
             <div class="next" @click="nextSlide"></div>
             <div class="thumb">
@@ -146,12 +146,11 @@ export default {
     height: 20px;
     margin: 10px 0;
     border-radius: 50%;
-    background: #ccc;
-    /* position: absolute;
-    left: 50%; */
-    transform: translate(-50%);
+    background: #25ab9430;
     cursor: pointer;
-    z-index: 999;
+    z-index: 5;
+    margin: 10px 5px;
+    position: relative;
 }
 
 .next {
@@ -168,11 +167,12 @@ oppure i caratteri ∧ (&and;) e ∨ (&or;)
     content: '';
     width: 10px;
     height: 10px;
-    border-top: 1px solid black;
-    border-right: 1px solid black;
+    border-top: 1px solid #3f3a64;
+    border-right: 1px solid #3f3a64;
     display: block;
     position: absolute;
-    top: 35%;
+    z-index: 6;
+    top: 25%;
     left: 50%;
     transform: translate(-50%) rotate(-135deg);
 }
@@ -181,11 +181,12 @@ oppure i caratteri ∧ (&and;) e ∨ (&or;)
     content: '';
     width: 10px;
     height: 10px;
-    border-top: 1px solid black;
-    border-right: 1px solid black;
+    border-top: 1px solid #3f3a64;
+    border-right: 1px solid #3f3a64;
     display: block;
     position: absolute;
-    bottom: 35%;
+    z-index: 6;
+    bottom: 30%;
     left: 50%;
     transform: translate(-50%) rotate(45deg);
 }
