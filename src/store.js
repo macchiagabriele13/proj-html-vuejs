@@ -1,10 +1,31 @@
 import { reactive } from 'vue'
 
 export const store = reactive({
-
-    /* URL: 'https://www.breakingbadapi.com/api/characters',
-    characters: '',
-    loading: true,
-    selCategory: '', */
+    navList: [
+        {
+            text: 'Home',
+            href: '#'
+        },
+        {
+            text: 'Pages',
+            href: '#'
+        },
+        {
+            text: 'Courses',
+            href: '#'
+        },
+        {
+            text: 'Features',
+            href: '#'
+        },
+        {
+            text: 'Blog',
+            href: '#'
+        },
+        {
+            text: 'Shop',
+            href: '#'
+        },
+    ],
 
 })

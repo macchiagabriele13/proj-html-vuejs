@@ -1,38 +1,13 @@
 <script>
+import { store } from '../store.js';
 
 export default {
     name: "Navbar",
     data() {
         return {
-            navList: [
-                {
-                    text: 'Home',
-                    href: '#'
-                },
-                {
-                    text: 'Pages',
-                    href: '#'
-                },
-                {
-                    text: 'Courses',
-                    href: '#'
-                },
-                {
-                    text: 'Features',
-                    href: '#'
-                },
-                {
-                    text: 'Blog',
-                    href: '#'
-                },
-                {
-                    text: 'Shop',
-                    href: '#'
-                },
-            ],
-
+            store,
         }
-    },
+    }
 }
 
 
@@ -46,7 +21,7 @@ export default {
 
         <!-- Nav tabs -->
         <ul class="nav" id="navId">
-            <li class="nav-item dropdown" v-for="link in navList">
+            <li class="nav-item dropdown" v-for="link in store.navList">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                     aria-expanded="false" :href="link.href">{{ link.text }}
                     <svg xmlns="http://www.w3.org/2000/svg" class="chevdown" viewBox="0 0 512 512">
