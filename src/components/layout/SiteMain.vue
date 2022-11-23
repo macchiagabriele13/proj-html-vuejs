@@ -8,6 +8,7 @@ import MainSlider from '../MainSlider.vue';
 import BannerCall from '../BannerCall.vue';
 import DataCounter from '../DataCounter.vue'
 import BlogSection from '../BlogSection.vue';
+import NewsLetter from '../NewsLetter.vue';
 
 
 
@@ -23,7 +24,8 @@ export default {
         SliderCard,
         BannerCall,
         DataCounter,
-        BlogSection
+        BlogSection,
+        NewsLetter
     }
 }
 
@@ -43,6 +45,7 @@ export default {
         <BannerCall />
         <DataCounter />
         <BlogSection />
+        <NewsLetter />
 
 
 
