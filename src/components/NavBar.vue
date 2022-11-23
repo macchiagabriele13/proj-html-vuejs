@@ -21,7 +21,29 @@ export default {
 
         <!-- Nav tabs -->
         <ul class="nav" id="navId">
-            <li class="nav-item dropdown" v-for="link in store.navList">
+            <li class="nav-item dropdown" v-for="(link, index) in store.navList">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false" @click="store.viewDropdown(index)" :href="link.href">{{ link.text }}
+                    <svg xmlns="http://www.w3.org/2000/svg" class="chevdown" viewBox="0 0 512 512">
+                        <path
+                            d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+                    </svg>
+                </a>
+                <div v-show="link.dropdown" class="prova" @mouseleave="store.viewDropdownout(index)">
+                    <a class="dropdown-item" href="#tab2Id">Action</a>
+                    <a class="dropdown-item" href="#tab3Id">Another action</a>
+                    <a class="dropdown-item" href="#tab4Id">Action</a>
+                </div>
+            </li>
+
+        </ul>
+
+
+
+
+        <!-- Nav tabs -->
+        <!-- <ul class="nav" id="navId">
+            <li class="nav-item dropdown" v-for="(link, index) in store.navList">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                     aria-expanded="false" :href="link.href">{{ link.text }}
                     <svg xmlns="http://www.w3.org/2000/svg" class="chevdown" viewBox="0 0 512 512">
@@ -36,7 +58,7 @@ export default {
                 </div>
             </li>
 
-        </ul>
+        </ul> -->
 
         <!-- Tab panes -->
         <div class="tab-content">
@@ -48,7 +70,7 @@ export default {
         </div>
 
         <!-- UserProfile -->
-        <div class="circle bg-black rounded-circle text-center">
+        <div class="circle rounded-circle text-center">
             <i class="fa-regular fa-user"></i>
         </div>
 
@@ -58,6 +80,13 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+.nav {
+    a {
+        color: black;
+        font-weight: 500
+    }
+}
+
 .dropdown-toggle::after {
     display: inline-block;
     margin-left: 0.255em;
@@ -69,19 +98,25 @@ export default {
     content: none;
 }
 
+.prova {
+    position: absolute;
+    background: white;
+    padding: 1.5rem;
+}
+
 .chevdown {
     width: 10px;
 }
 
 .circle {
     height: 25px;
-    border: 1px solid gray;
+    border: 1px solid black;
 
     i {
         height: 100%;
         width: 25px;
         aspect-ratio: 1/1;
-        color: gray;
+        color: black;
     }
 }
 </style>

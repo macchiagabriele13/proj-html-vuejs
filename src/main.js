@@ -11,7 +11,7 @@ import App from './App.vue';
 /* import the fontawesome core */
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
-import { faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { faSquareFacebook } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
@@ -22,7 +22,7 @@ import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 library.add(
     faTwitter,
-    faFacebook,
+    faSquareFacebook,
     faInstagram,
     faLinkedin,
 

@@ -4,27 +4,33 @@ export const store = reactive({
     navList: [
         {
             text: 'Home',
-            href: '#'
+            href: '#',
+            dropdown: false
         },
         {
             text: 'Pages',
-            href: '#'
+            href: '#',
+            dropdown: false
         },
         {
             text: 'Courses',
-            href: '#'
+            href: '#',
+            dropdown: false
         },
         {
             text: 'Features',
-            href: '#'
+            href: '#',
+            dropdown: false
         },
         {
             text: 'Blog',
-            href: '#'
+            href: '#',
+            dropdown: false
         },
         {
             text: 'Shop',
-            href: '#'
+            href: '#',
+            dropdown: false
         },
     ],
     socials: [
@@ -70,6 +76,12 @@ export const store = reactive({
             text: 'Contact us',
             href: '#'
         },
-    ]
+    ],
+    viewDropdown(index) {
+        store.navList[index].dropdown = !store.navList[index].dropdown
+    },
+    viewDropdownout(index) {
+        store.navList[index].dropdown = false
+    }
 
 })

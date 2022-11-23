@@ -1,38 +1,10 @@
 <script>
-import JumboVideo from './JumboVideo.vue'
-
 
 export default {
-    name: "MainTutor",
-    components: {
-        JumboVideo
-    },
+    name: "JumboVideo",
     data() {
         return {
-            tutorList: [
-                {
-                    img: '../assets/images/home-2-image-box-01.png',
-                    description: 'Learners are given the right to arrange and customize their study schedule and timetable based on preferences.',
-                    link: '#',
-                    text: 'Start here',
-                    title: 'Customize Preferences'
-                },
-                {
-                    img: '../assets/images/home-2-image-box-02.png',
-                    description: 'You can store online lessons via online cloud or download to your device and revise lessons on the way.',
-                    link: '#',
-                    text: 'Get Free Quote',
-                    title: 'Cloud Storage'
-                },
-                {
-                    img: '../assets/images/home-2-image-box-03.png',
-                    description: 'We provide study materials with various formats: video, audio, slides, doc, prints, books and applications.',
-                    link: '#',
-                    text: 'Start now',
-                    title: 'Multimedia Channels'
-                },
 
-            ],
 
         }
     },
@@ -47,61 +19,55 @@ export default {
 
 <template>
 
-    <section class="tutor py-5">
 
+    <section class="jumbo_due position-relative">
         <div class="container">
+            <div class="row align-items-center g-5 pt-5">
+                <div class="col">
+                    <div class="right_col h-100 p-5">
 
-            <div class="title_block text-center pb-5">
-                <h5>
-                    MAXCOACH AVAILABLE COURSES
-                </h5>
-                <h1>
-                    Access <span>Smart Tutoring</span> Program For Benefits.
-                </h1>
-            </div>
-
-            <div class="content-wrap">
-                <div class="row">
-                    <div class="col-4 gx-5 px-5" v-for="tutor in tutorList">
-                        <a :href="tutor.link">
-                            <div class="wrap-image pb-4">
-                                <img :src="getImagePath(`${tutor.img}`)" alt="tutor image">
-
-                            </div>
-
-                            <div class="content">
-                                <div class="caption">
-                                    <h3 class="title">{{ tutor.title }}</h3>
-                                    <div class="description">{{ tutor.description }} </div>
-                                </div>
-                                <div class="tm-button-wrapper">
-                                    <div class="tm-button style-bottom-line tm-button-nm icon-right">
-                                        <div class="button-content-wrapper">
-
-                                            <span class="button-text">{{ tutor.text }}</span>
-
-                                            <span class="button-icon">
-                                                <i class="fa-solid fa-arrow-right-long"></i> </span>
-                                        </div>
-                                    </div>
+                        <div class="position-relative">
+                            <div class="video-play">
+                                <div class="align-items-center d-flex justify-content-center video-play-image">
+                                    <img src="https://maxcoach.thememove.com/main/wp-content/uploads/sites/1/2019/11/icon-youtube-play.png"
+                                        alt="icon-youtube-play">
                                 </div>
                             </div>
+                            <div class="img_video">
+                                <img class="img_profile" src="../assets/images/home-2-popup-video-poster.jpg" alt="">
 
-                        </a>
+                            </div>
+                            <img class='green_down' src="../assets/images/maxcoach-shape-07.png" alt="">
+                            <img class='green_up' src="../assets/images/maxcoach-shape-05-150x150.png" alt="">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col pe-5">
+                    <div class="jumbotron jumbotron-fluid">
+                        <div class="container">
+                            <h3 class="heading-primary">GET STARTED <span class="marked_strong">EFFORTLESSLY</span></h3>
+
+                            <h1 class="heading-title">Enjoy Our <span class="marked">Companionship</span></h1>
+                            <p class="heading-description">Sneek peek into what has in store for you on our online
+                                teaching and
+                                mentoring portal. Seek for some hidden hints of early-bird rewards as well.</p>
+                            <p><a class="sample" href="#">Download free guidebook <i
+                                        class="px-2 fa-solid fa-arrow-right-long"></i></a></p>
+                        </div>
                     </div>
                 </div>
 
-
-
             </div>
-
-
+        </div>
+        <div class="shape shape-bottom" data-negative="false">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" height="315"
+                width="1500">
+                <path d="M 50 0 S75 0 100 100 L100 0"></path>
+            </svg>
         </div>
 
     </section>
-
-    <JumboVideo />
-
 
 
 </template>
@@ -134,17 +100,10 @@ export default {
     }
 }
 
-.button-content-wrapper {
-    width: fit-content;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.326);
-}
-
 .content-wrap {
     a {
         text-decoration: none;
-
-
-
+        border-bottom: 1px solid rgba(128, 128, 128, 0.326);
 
         &:hover {
 
@@ -155,11 +114,7 @@ export default {
 
             .button-content-wrapper {
                 width: fit-content;
-                border-bottom: 1px solid $back-texthover;
-                transition: cubic-bezier(1, 0, 0, 1);
-
-                transform: scaleX(1) translateZ(0);
-                transform-origin: left;
+                border-bottom: 1px solid rgba(128, 128, 128, 0.326);
             }
 
         }
@@ -229,16 +184,31 @@ export default {
     z-index: -1;
 }
 
+.img_video {
+    overflow: hidden;
+}
 
 .video-play {
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: 2;
+    z-index: 0;
 
     .video-play-image {
         width: 100%;
         height: 100%;
+
+        &:hover {
+            cursor: pointer;
+
+        }
+    }
+}
+
+
+.video-play:hover {
+    .img_profile {
+        transform: scaleX(1.2);
     }
 }
 
