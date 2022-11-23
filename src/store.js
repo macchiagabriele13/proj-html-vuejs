@@ -27,5 +27,49 @@ export const store = reactive({
             href: '#'
         },
     ],
+    socials: [
+        {
+            icon: "fa-facebook",
+            href: "#",
+        },
+        {
+            icon: "fa-twitter",
+            href: "#",
+        },
+        {
+            icon: "fa-instagram",
+            href: "#",
+        },
+        {
+            icon: "fa-linkedin",
+            href: "#",
+        },
+    ],
+    footList: [
+        {
+            text: 'Start here',
+            href: '#'
+        },
+        {
+            text: 'Blog',
+            href: '#'
+        },
+        {
+            text: 'About us',
+            href: '#'
+        },
+        {
+            text: 'Success story',
+            href: '#'
+        },
+        {
+            text: 'Courses',
+            href: '#'
+        },
+        {
+            text: 'Contact us',
+            href: '#'
+        },
+    ]
 
 })
