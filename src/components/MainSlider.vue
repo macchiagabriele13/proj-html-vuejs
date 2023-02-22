@@ -86,7 +86,8 @@ export default {
         </div>
 
         <div class="row">
-            <SliderCard :card="team" :class="activeSlide === i ? 'active' : ''" v-for="(team,i) in teamList" />
+            <SliderCard :card="team" :class="activeSlide === i ? 'active' : ''" :prev="activeSlide === i ? 'prev' : ''"
+                :next="activeSlide === i ? 'next' : ''" v-for="(team,i) in teamList" />
         </div>
 
 
